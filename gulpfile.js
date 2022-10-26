@@ -12,6 +12,8 @@ const copy = require('gulp-contrib-copy');
 var path = {
     src: './src/',
     dest: './dest',
+    dest_js: './dest/js/',
+    dest_css: './dest/css/',
     dest_files: './dest/*'
 }
 
@@ -37,7 +39,7 @@ gulp.task('concat-css', function () {
 gulp.task('concat-js', function () {
     return gulp.src('./src/js/*.js')
         .pipe(concat('bundle.js'))
-        .pipe(gulp.dest('./dest/js/'));
+        .pipe(gulp.dest(path.dest_js));
 });
 
 //minify css file
@@ -50,7 +52,25 @@ gulp.task('minify-css', ['concat-css'], function () {
             path.basename += ".min";
             path.extname = ".css";
         }))
-        .pipe(gulp.dest('./dest/css/'));
+        .pipe(gulp.dest(path.dest_css));
+});
+
+//concat all css files into one bundle css file and minify this file
+gulp.task('css', function () {
+    return gulp.src('./src/css/*.css')
+        .pipe(concat('bundle.min.css'))
+        .pipe(minifyCSS({
+            keepBreaks: false,
+        }))
+        .pipe(gulp.dest(path.dest_css));
+});
+
+//concat all js files into one bundle js file and minify this file
+gulp.task('js', function () {
+    return gulp.src('./src/js/*.js')
+        .pipe(concat('bundle.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(path.dest_js));
 });
 
 //uglify all js files and concat them to a bundle file
@@ -102,6 +122,6 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('public/'));
 });
 
-gulp.task('build', ['html', 'minify-css', 'bundle-js']);
+gulp.task('build', ['html', 'css', 'js']);
 
 gulp.task('default', ['build', 'server']);
