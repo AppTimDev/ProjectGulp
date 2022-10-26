@@ -2,11 +2,14 @@
 
 ---
 
-1. Minify and uglify js 
-2. Minify css
-3. Minify html
-4. Combine all files to a bundle file
-5. Create a webserver with liveload
+Use gulp as a task runner
+- Minify and uglify js 
+- Minify css
+- Minify html
+- Combine all files to a bundle file
+- Create a webserver with liveload
+- Clean all files
+- Copy files to destination folder
 
 ---
 
@@ -61,6 +64,8 @@ npm install
 npm install gulp-webserver --save-dev
 npm install gulp-minify-css gulp-uglify gulp-concat gulp-rename --save-dev
 npm install gulp-html-replace gulp-minify-html --save-dev
+
+npm install rimraf gulp-contrib-copy--save-dev
 ```
 
 ---

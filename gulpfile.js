@@ -6,9 +6,17 @@ const uglify = require('gulp-uglify');
 const rename = require("gulp-rename");
 const htmlreplace = require('gulp-html-replace');
 const minifyHTML = require('gulp-minify-html');
+const rimraf = require('rimraf');
+const copy = require('gulp-contrib-copy');
+
+var path = {
+    src: './src/',
+    dest: './dest',
+    dest_files: './dest/*'
+}
 
 gulp.task('server', function () {
-    gulp.src('./dest/')
+    gulp.src(path.dest)
         .pipe(webserver({
             port: 8080,
             livereload: true,
@@ -25,6 +33,13 @@ gulp.task('concat-css', function () {
         .pipe(gulp.dest('./dest/css/'));
 });
 
+//concat all js files
+gulp.task('concat-js', function () {
+    return gulp.src('./src/js/*.js')
+        .pipe(concat('bundle.js'))
+        .pipe(gulp.dest('./dest/js/'));
+});
+
 //minify css file
 gulp.task('minify-css', ['concat-css'], function () {
     return gulp.src('./dest/css/bundle.css')
@@ -38,7 +53,18 @@ gulp.task('minify-css', ['concat-css'], function () {
         .pipe(gulp.dest('./dest/css/'));
 });
 
-//uglify js files
+//uglify all js files and concat them to a bundle file
+gulp.task('bundle-js', ['concat-js'], function () {
+    return gulp.src('./dest/js/bundle.js')
+        .pipe(uglify())
+        .pipe(rename(function (path) {
+            path.basename += ".min";
+            path.extname = ".js";
+        }))
+        .pipe(gulp.dest('./dest/js/'));
+});
+
+//uglify each js file
 gulp.task('uglify', function () {
     return gulp.src('./src/js/*.js')
         .pipe(uglify())
@@ -48,7 +74,6 @@ gulp.task('uglify', function () {
         }))
         .pipe(gulp.dest('./dest/js/'));
 });
-
 
 gulp.task('html', function () {
     var options = {
@@ -65,7 +90,18 @@ gulp.task('html', function () {
         .pipe(gulp.dest('./dest/'));
 });
 
+//remove all files of the destination folder
+gulp.task('clean', function (cb) {
+    rimraf(path.dest_files, cb);
+});
 
-gulp.task('build', ['html', 'minify-css', 'uglify']);
+//Copy files to destination folder
+gulp.task('copy', function () {
+    gulp.src('dest/**')
+        .pipe(copy())
+        .pipe(gulp.dest('public/'));
+});
 
-gulp.task('default', ['build','server']);
+gulp.task('build', ['html', 'minify-css', 'bundle-js']);
+
+gulp.task('default', ['build', 'server']);
