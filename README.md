@@ -16,9 +16,16 @@
 - node v10.24.1
 - npm 6.14.12
 - gulp 3.8.11
-  CLI version 3.8.11
-  Local version 3.8.11
-- gulp-webserver@0.9.1
+  - CLI version 3.8.11
+  - Local version 3.8.11
+
+- gulp-concat ^2.6.1
+- gulp-html-replace ^1.6.2
+- gulp-minify-css ^1.2.4
+- gulp-minify-html ^1.0.6
+- gulp-rename ^2.0.0
+- gulp-uglify ^3.0.2
+- gulp-webserver ^0.9.1
 
 ---
 
@@ -38,15 +45,23 @@ Edit the PATH variable and add a new value "C:\Users\Username\AppData\Roaming\np
 
 ### To update Local version 
 npm install gulp@version_you_need --save-dev
+
 npm install gulp@3.8.11 --save-dev
 
 ### To update CLI version 
 npm install -g gulp@version_you_need
-npm install -g gulp@3.8.11
----
 
-## Installation of the 
-### 
+npm install -g gulp@3.8.11
+
+### Installation of all the gulp packages required
+```cmd
+npm install
+```
+```cmd
+npm install gulp-webserver --save-dev
+npm install gulp-minify-css gulp-uglify gulp-concat gulp-rename --save-dev
+npm install gulp-html-replace gulp-minify-html --save-dev
+```
 
 ---
 
