@@ -1,14 +1,15 @@
 {
-  "name": "projectgulp",
-  "version": "1.0.0",
-  "description": "---",
-  "main": "index.js",
-  "devDependencies": {
-    "gulp": "^3.9.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "AppTimDev",
-  "license": "ISC"
+    "name": "projectgulp",
+    "version": "1.0.0",
+    "description": "---",
+    "main": "index.js",
+    "devDependencies": {
+        "gulp": "^3.8.11",
+        "gulp-webserver": "^0.9.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "AppTimDev",
+    "license": "ISC"
 }
