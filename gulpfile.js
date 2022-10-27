@@ -122,6 +122,11 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('public/'));
 });
 
+gulp.task('watch', function () {
+    console.log('watch');
+    
+});
+
 gulp.task('build', ['html', 'css', 'js']);
 
 gulp.task('default', ['build', 'server']);

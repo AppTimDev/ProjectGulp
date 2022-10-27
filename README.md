@@ -23,12 +23,14 @@ Use gulp as a task runner
   - Local version 3.8.11
 
 - gulp-concat ^2.6.1
+- gulp-contrib-copy ^0.1.3
 - gulp-html-replace ^1.6.2
 - gulp-minify-css ^1.2.4
 - gulp-minify-html ^1.0.6
 - gulp-rename ^2.0.0
 - gulp-uglify ^3.0.2
 - gulp-webserver ^0.9.1
+- rimraf ^3.0.2
 
 ---
 
@@ -64,8 +66,8 @@ npm install
 npm install gulp-webserver --save-dev
 npm install gulp-minify-css gulp-uglify gulp-concat gulp-rename --save-dev
 npm install gulp-html-replace gulp-minify-html --save-dev
+npm install rimraf gulp-contrib-copy --save-dev
 
-npm install rimraf gulp-contrib-copy--save-dev
 ```
 
 ---
