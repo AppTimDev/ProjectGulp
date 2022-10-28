@@ -26,6 +26,7 @@ gulp.task('browser-dev', () => {
         port: 8080
     });
 });
+
 gulp.task('browser-pro', () => {
     browserSync.init({
         server: {
@@ -34,12 +35,25 @@ gulp.task('browser-pro', () => {
         port: 8080
     });
 });
-gulp.task('watch', function () {
+gulp.task('watch-dev', function () {
     gulp.watch("./src/**").on('change', browserSync.reload);
 
 });
-gulp.task('dev', ['browser-dev', 'watch']);
-gulp.task('pro', ['browser-pro', 'watch']);
+
+gulp.task('build', ['html', 'css', 'js']);
+gulp.task('build-reload', ['build'], function(done) {
+    browserSync.reload();
+    done();
+});
+//browser-pro
+//if any files change in source files,i.e. watch-pro task
+//build task --> browserSync.reload
+gulp.task('watch-pro', function () {
+    gulp.watch("./src/**", ['build-reload']);
+});
+
+gulp.task('dev', ['browser-dev', 'watch-dev']);
+gulp.task('pro', ['browser-pro', 'watch-pro']);
 
 gulp.task('server', function () {
     gulp.src(path.dest)
@@ -147,6 +161,7 @@ gulp.task('copy', function () {
 });
 
 
-gulp.task('build', ['html', 'css', 'js']);
+
 
 gulp.task('default', ['build', 'pro']);
+
