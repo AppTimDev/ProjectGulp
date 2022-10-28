@@ -8,6 +8,7 @@ const htmlreplace = require('gulp-html-replace');
 const minifyHTML = require('gulp-minify-html');
 const rimraf = require('rimraf');
 const copy = require('gulp-contrib-copy');
+const browserSync = require('browser-sync').create();
 
 var path = {
     src: './src/',
@@ -16,6 +17,20 @@ var path = {
     dest_css: './dest/css/',
     dest_files: './dest/*'
 }
+
+gulp.task('browser', () => {
+    browserSync.init({
+        server: {
+            baseDir: path.src,
+        },
+        port: 8080
+    });
+});
+gulp.task('watch', function () {
+    gulp.watch("./src/**").on('change', browserSync.reload);
+
+});
+gulp.task('dev', ['browser', 'watch']);
 
 gulp.task('server', function () {
     gulp.src(path.dest)
@@ -122,10 +137,6 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('public/'));
 });
 
-gulp.task('watch', function () {
-    console.log('watch');
-    
-});
 
 gulp.task('build', ['html', 'css', 'js']);
 

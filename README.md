@@ -31,6 +31,7 @@ Use gulp as a task runner
 - gulp-uglify ^3.0.2
 - gulp-webserver ^0.9.1
 - rimraf ^3.0.2
+- browser-sync@2.27.10
 
 ---
 
@@ -67,7 +68,7 @@ npm install gulp-webserver --save-dev
 npm install gulp-minify-css gulp-uglify gulp-concat gulp-rename --save-dev
 npm install gulp-html-replace gulp-minify-html --save-dev
 npm install rimraf gulp-contrib-copy --save-dev
-
+npm install browser-sync --save-dev
 ```
 
 ---
@@ -110,7 +111,7 @@ npm list
 
 ### Check the version of node packages
 ```cmd
-npm list gulp-webserver
+npm list browser-sync
 ```
 
 ---
