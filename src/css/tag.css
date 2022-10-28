@@ -1,0 +1,30 @@
+.tag {
+    background-color: var(--color-tag-outer);
+    height: 40px;
+    border-radius: 36px;
+    padding: 16px;
+    margin-top: 2rem;
+    max-width: 300px;
+}
+
+.tag-inner {
+    display: block;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--color-tag-inner);
+}
+.tag-inner>svg {
+    margin-left: 16px;
+    margin-top: 8px;
+    fill: var(--color-tag-text);
+}
+
+.tag-inner>span {
+    margin-left: 5px; 
+    position: relative;
+    top: -6px;
+    /* margin-top not work */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-tag-text);
+}
