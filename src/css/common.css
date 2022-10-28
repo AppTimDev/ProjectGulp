@@ -16,8 +16,10 @@ body {
 
 html {
     scroll-behavior: smooth;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
-
 .no-link{
     color: inherit;
     text-decoration: inherit;
@@ -28,8 +30,15 @@ html {
     position: -o-sticky;
     position: -ms-sticky;
     position: sticky;
+    z-index: 0;
 }
-
+.sticky-smooth{
+    -webkit-transform: translate3d(0,0,0); /* WebKit */
+    -moz-transform: translate3d(0,0,0); /* Mozilla */
+    -o-transform: translate3d(0,0,0); /* Opera */
+    -ms-transform: translate3d(0,0,0); /* Internet Explorer */
+    transform: translate3d(0,0,0); /* CSS3 */
+}
 .wrapper {
     max-width: 100%;
     min-height: 100vh;
@@ -37,64 +46,64 @@ html {
 
 header {
     /* background-image: var(--bg-header);     */
-    position: sticky;
-    width: 100%;
     top: 0;
     left: 0;
-    z-index: 0;
+    width: 100%;
 }
 
 .main-section {
     position: relative;
+    z-index: 1;    
+
+
+
     background-color: var(--color-container);
     height: 800px;
-    position: relative;
     border-radius: 50px 50px 0 0;
-    z-index: 100;
 
     /* change */
     padding-top: 50px;
 }
 
 .info {
-    max-width: 300px;
-    min-height: 300px;    
+    max-width: 300px;   
+    min-height: 400px;
 }
 /*============ BREAKPOINTS ============*/
 /* Default screen devices */
-.pd-x-info{
+.px-info{
     padding-left: 30px;
 }
-.pd-y-info{
+.py-info{
     padding-top: 5px;
     padding-bottom: 30px;
 }
 /* Small screen devices (596px and above) */
 @media screen and (min-width: 596px) {
-    .pd-x-info{
+    .px-sm-info{
         padding-left: 100px;
     }
 }
 /* Medium screen devices */
 @media screen and (min-width: 992px) {
-    .pd-x-info{
+    .px-lg-info{
         padding-left: 200px;
     }
 }
 @media screen and (min-height: 375px) {
-    .pd-y-info{
+    .py-sm-info{
         padding-top: 60px;
         padding-bottom: 30px;
     }
 }
 @media screen and (min-height: 500px) {
-    .pd-y-info{
+    .py-md-info{
         padding-top: 120px;
         padding-bottom: 60px;
     }
 }
 @media screen and (min-height: 800px) {
-    .pd-y-info{
+    .py-lg-info{
         padding-top: 120px;
         padding-bottom: 60px;
     }
