@@ -18,10 +18,18 @@ var path = {
     dest_files: './dest/*'
 }
 
-gulp.task('browser', () => {
+gulp.task('browser-dev', () => {
     browserSync.init({
         server: {
             baseDir: path.src,
+        },
+        port: 8080
+    });
+});
+gulp.task('browser-pro', () => {
+    browserSync.init({
+        server: {
+            baseDir: path.dest,
         },
         port: 8080
     });
@@ -30,7 +38,8 @@ gulp.task('watch', function () {
     gulp.watch("./src/**").on('change', browserSync.reload);
 
 });
-gulp.task('dev', ['browser', 'watch']);
+gulp.task('dev', ['browser-dev', 'watch']);
+gulp.task('pro', ['browser-pro', 'watch']);
 
 gulp.task('server', function () {
     gulp.src(path.dest)
@@ -140,4 +149,4 @@ gulp.task('copy', function () {
 
 gulp.task('build', ['html', 'css', 'js']);
 
-gulp.task('default', ['build', 'server']);
+gulp.task('default', ['build', 'pro']);

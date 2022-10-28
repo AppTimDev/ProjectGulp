@@ -35,8 +35,9 @@ html {
     min-height: 100vh;
 }
 
-.header {
+header {
     /* background-image: var(--bg-header);     */
+    position: sticky;
     width: 100%;
     top: 0;
     left: 0;
@@ -44,10 +45,12 @@ html {
 }
 
 .main-section {
+    position: relative;
     background-color: var(--color-container);
     height: 800px;
     position: relative;
     border-radius: 50px 50px 0 0;
+    z-index: 100;
 
     /* change */
     padding-top: 50px;
@@ -55,15 +58,47 @@ html {
 
 .info {
     max-width: 300px;
-    position: relative;
-    left: 20%;
-    top: 80px;
-    min-height: 600px;
-
-    padding-top: 60px;
-    padding-bottom: 60px;
+    min-height: 300px;    
 }
-
+/*============ BREAKPOINTS ============*/
+/* Default screen devices */
+.pd-x-info{
+    padding-left: 30px;
+}
+.pd-y-info{
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+/* Small screen devices (596px and above) */
+@media screen and (min-width: 596px) {
+    .pd-x-info{
+        padding-left: 100px;
+    }
+}
+/* Medium screen devices */
+@media screen and (min-width: 992px) {
+    .pd-x-info{
+        padding-left: 200px;
+    }
+}
+@media screen and (min-height: 375px) {
+    .pd-y-info{
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+}
+@media screen and (min-height: 500px) {
+    .pd-y-info{
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+}
+@media screen and (min-height: 800px) {
+    .pd-y-info{
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+}
 .info-image {
     width: 80px;
     height: 80px;
