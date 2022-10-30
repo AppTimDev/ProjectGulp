@@ -35,7 +35,7 @@ header {
         padding-left: 100px;
     }
 }
-/* Medium screen devices */
+/* Large screen devices */
 @media screen and (min-width: 992px) {
     .px-lg-info{
         padding-left: 200px;
@@ -102,4 +102,11 @@ header {
 .contact-label {
     font-size: 18px;
     font-weight: bold;
+}
+
+.flex > .card{
+    background-color: var(--bg-color-card-description);
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
 }
