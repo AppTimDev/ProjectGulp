@@ -14,6 +14,7 @@
     --color-tag-outer: rgb(90, 92, 83);
     --color-tag-inner: rgba(217,234,215,1);
     --color-tag-text: rgb(90, 92, 83);
+    
 
     /*============ Font family ============*/    
     --ff-body: 'Helvetica', 'Arial', sans-serif;
@@ -23,6 +24,7 @@
     --bg-color-scrollbar-thumb: var(--color-dark-sea-green);
     --bg-color-copyright: rgba(35, 142, 204, 1);
     --bg-header: linear-gradient(#CCFFCC, #CCCCFF);
+    --bg-color-card-description: rgba(246,243,212,1);
 
 
 }
