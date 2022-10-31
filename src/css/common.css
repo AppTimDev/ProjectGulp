@@ -157,12 +157,29 @@ a.link-email>svg {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.px-30px{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.py-30px{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.px-40px{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.py-40px{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 .pb-50px{
     padding-bottom: 50px;
 }
 .pb-80px{
     padding-bottom: 80px;
 }
+
 /* Large screen devices */
 @media screen and (min-width: 992px) {
     .lg-px-10px{
@@ -180,6 +197,9 @@ a.link-email>svg {
     .lg-py-20px{
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    .lg-p-40px{
+        padding: 40px;
     }
     .lg-pt-50px{
         padding-top: 50px;
@@ -213,11 +233,14 @@ a.link-email>svg {
 }
 
 /*============ font ============*/
+.uppercase{
+    text-transform: uppercase;
+}
 .text-center{
     text-align: center;
 }
 .font-bold{
-    font-weight: bold;
+    font-weight: 700;
 }
 .text-14px {
     font-size: 14px;

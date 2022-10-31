@@ -5,6 +5,31 @@ header {
     width: 100%;
     min-height: 100vh;
 }
+.info {
+    max-width: 300px;   
+    min-height: 400px;
+}
+.info-image {
+    width: 80px;
+    height: 80px;
+}
+
+.info-name {
+    font-size: 46px;
+    font-weight: bold;
+    margin: 10px;
+
+    text-shadow: 1px 1px 0 rgba(204, 204, 204, 0.479),
+        2px 2px 0 rgba(204, 204, 204, 0.479),
+        3px 3px 0 rgba(204, 204, 204, 0.479),
+        4px 4px 0 rgba(204, 204, 204, 0.479);
+}
+
+.info-description {
+    font-size: 26px;
+    margin: 10px;
+    color: rgba(30, 46, 100, 0.479);
+}
 
 .main {
     position: relative;
@@ -15,11 +40,17 @@ header {
 .main-section {
 
 }
-.info {
-    max-width: 300px;   
-    min-height: 400px;
+.main-subsection{
+    background-color: var(--color-container-item);
+    border-radius: 50px;
 }
 
+.main-subsection-top{
+
+}
+.main-subsection-content{
+
+}
 
 /*============ BREAKPOINTS ============*/
 /* Default screen devices */
@@ -60,50 +91,9 @@ header {
         padding-bottom: 60px;
     }
 }
-.info-image {
-    width: 80px;
-    height: 80px;
-}
 
-.info-name {
-    font-size: 46px;
-    font-weight: bold;
-    margin: 10px;
 
-    text-shadow: 1px 1px 0 rgba(204, 204, 204, 0.479),
-        2px 2px 0 rgba(204, 204, 204, 0.479),
-        3px 3px 0 rgba(204, 204, 204, 0.479),
-        4px 4px 0 rgba(204, 204, 204, 0.479);
-}
 
-.info-description {
-    font-size: 26px;
-    margin: 10px;
-    color: rgba(30, 46, 100, 0.479);
-}
-
-.contact {
-    background-color: var(--color-container-item);
-    height: 300px;
-    border-radius: 50px;
-}
-
-.main-subsection-title{
-    position: relative;
-    left: 40px;
-    top: 30px;
-    width: 50%;
-}
-.main-subsection-content{
-    position: relative;
-    left: 40px;
-    top: 50px;
-    width: 90%;
-}
-.contact-label {
-    font-size: 18px;
-    font-weight: bold;
-}
 
 .flex > .card{
     background-color: var(--bg-color-card-description);
