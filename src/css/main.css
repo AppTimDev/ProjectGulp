@@ -6,14 +6,15 @@ header {
     min-height: 100vh;
 }
 
-.main-section {
+.main {
     position: relative;
     z-index: 1;
     background-color: var(--color-container);
-    height: 800px;
     border-radius: 50px 50px 0 0;
 }
+.main-section {
 
+}
 .info {
     max-width: 300px;   
     min-height: 400px;

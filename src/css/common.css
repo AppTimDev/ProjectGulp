@@ -53,13 +53,13 @@ footer {
     bottom: 0;
     width: 100%;
     height: 40px;
+    background-color: var(--bg-color-footer);
 }
 
 .copyright {
-    color: var(--color-copyright);
-    background-color: var(--bg-color-copyright);
-    text-align: center;
-    line-height: 40px;
+    color: var(--color-copyright);    
+    font-size: 12px;
+    line-height: 1;
 }
 
 a.link-email>svg {
@@ -68,8 +68,7 @@ a.link-email>svg {
 
 /*============ flex ============*/
 
-.flex 
-{
+.flex {
     display: flex;
 }
 .flex-wrap{
@@ -83,6 +82,25 @@ a.link-email>svg {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+.justify-center {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.justify-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 }
 .gap-15px{
     grid-gap: 15px;
@@ -115,8 +133,6 @@ a.link-email>svg {
     margin-top: auto;
     margin-bottom: auto;
 }
-
-
 .px-8px{
     padding-left: 8px;
     padding-right: 8px;
@@ -141,6 +157,12 @@ a.link-email>svg {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.pb-50px{
+    padding-bottom: 50px;
+}
+.pb-80px{
+    padding-bottom: 80px;
+}
 /* Large screen devices */
 @media screen and (min-width: 992px) {
     .lg-px-10px{
@@ -159,6 +181,17 @@ a.link-email>svg {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .lg-pt-50px{
+        padding-top: 50px;
+    }
+    .lg-py-50px{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .lg-py-80px{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 }
 @media (min-width: 1024px){
     .lg\:px-20px {
@@ -171,8 +204,18 @@ a.link-email>svg {
 .round-full{
     border-radius: 9999px;
 }
+.round-50px {
+    border-radius: 50px;
+}
+.round-t-50px {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
 
 /*============ font ============*/
+.text-center{
+    text-align: center;
+}
 .font-bold{
     font-weight: bold;
 }

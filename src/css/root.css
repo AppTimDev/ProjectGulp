@@ -22,6 +22,7 @@
     /*============ background ============*/
     --bg-color-scrollbar: hsl(0, 0%, 74%);;
     --bg-color-scrollbar-thumb: var(--color-dark-sea-green);
+    --bg-color-footer: rgba(35, 142, 204, 1);
     --bg-color-copyright: rgba(35, 142, 204, 1);
     --bg-header: linear-gradient(#CCFFCC, #CCCCFF);
     --bg-color-card-description: rgba(246,243,212,1);
