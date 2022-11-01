@@ -44,7 +44,9 @@ header {
     background-color: var(--color-container-item);
     border-radius: 50px;
 }
-
+.main-subsection-top-more{
+    background-color: rgba(219,234,141,1);
+}
 .main-subsection-top{
 
 }
