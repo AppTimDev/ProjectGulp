@@ -63,41 +63,40 @@ header {
 }
 /* Small screen devices (596px and above) */
 @media screen and (min-width: 596px) {
-    .px-sm-info{
+    .sm\:px-info{
         padding-left: 100px;
     }
 }
 /* Large screen devices */
 @media screen and (min-width: 992px) {
-    .px-lg-info{
+    .lg\:px-info{
         padding-left: 200px;
     }
 }
 @media screen and (min-height: 375px) {
-    .py-sm-info{
+    .sm\:py-info{
         padding-top: 60px;
         padding-bottom: 30px;
     }
 }
 @media screen and (min-height: 500px) {
-    .py-md-info{
+    .md\:py-info{
         padding-top: 120px;
         padding-bottom: 60px;
     }
 }
 @media screen and (min-height: 800px) {
-    .py-lg-info{
+    .lg\:py-info{
         padding-top: 120px;
         padding-bottom: 60px;
     }
 }
 
 
-
-
-.flex > .card{
+a.card{
     background-color: var(--bg-color-card-description);
-    width: 300px;
-    height: 60px;
-    border-radius: 30px;
+}
+.card-icon{
+    height: 30px;
+    width: 30px;
 }

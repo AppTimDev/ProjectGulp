@@ -12,6 +12,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     background-color: var(--color-container);
+    font-family: var(--ff-body);
 }
 
 html {
@@ -21,11 +22,12 @@ html {
     text-size-adjust: none;
 }
 
-.no-link{
+.no-link {
     color: inherit;
     text-decoration: inherit;
 }
-.sticky{
+
+.sticky {
     position: -webkit-sticky;
     position: -moz-sticky;
     position: -o-sticky;
@@ -33,13 +35,20 @@ html {
     position: sticky;
     z-index: 0;
 }
-.sticky-smooth{
-    -webkit-transform: translate3d(0,0,0); /* WebKit */
-    -moz-transform: translate3d(0,0,0); /* Mozilla */
-    -o-transform: translate3d(0,0,0); /* Opera */
-    -ms-transform: translate3d(0,0,0); /* Internet Explorer */
-    transform: translate3d(0,0,0); /* CSS3 */
+
+.sticky-smooth {
+    -webkit-transform: translate3d(0, 0, 0);
+    /* WebKit */
+    -moz-transform: translate3d(0, 0, 0);
+    /* Mozilla */
+    -o-transform: translate3d(0, 0, 0);
+    /* Opera */
+    -ms-transform: translate3d(0, 0, 0);
+    /* Internet Explorer */
+    transform: translate3d(0, 0, 0);
+    /* CSS3 */
 }
+
 .wrapper {
     max-width: 100%;
     min-height: 100vh;
@@ -57,7 +66,7 @@ footer {
 }
 
 .copyright {
-    color: var(--color-copyright);    
+    color: var(--color-copyright);
     font-size: 12px;
     line-height: 1;
 }
@@ -71,30 +80,36 @@ a.link-email>svg {
 .flex {
     display: flex;
 }
-.flex-wrap{
+
+.flex-wrap {
     flex-wrap: wrap;
 }
-.flex-nowrap{
+
+.flex-nowrap {
     flex-wrap: nowrap;
 }
+
 .items-center {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
 }
+
 .justify-center {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: center;
     justify-content: center;
 }
+
 .justify-between {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     justify-content: space-between;
 }
+
 .flex-col {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -102,118 +117,177 @@ a.link-email>svg {
     -webkit-flex-direction: column;
     flex-direction: column;
 }
-.gap-15px{
+.grid{
+    display: grid;
+}
+
+.gap-5px{
+    grid-gap: 5px;
+    gap: 5px;
+}
+.gap-10px{
+    grid-gap: 10px;
+    gap: 10px;
+}
+.gap-15px {
     grid-gap: 15px;
     gap: 15px;
 }
-.gap-20px{
+
+.gap-20px {
     grid-gap: 20px;
     gap: 20px;
 }
-.gap-30px{
+
+.gap-30px {
     grid-gap: 30px;
     gap: 30px;
 }
+
 .gap-40px {
     grid-gap: 40px;
     gap: 40px;
 }
+/* Small screen devices (596px and above) */
+@media screen and (min-width: 596px) {
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+/* Medium screen devices (768px and above) */
+@media (min-width: 768px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 /*============ Common margin padding size ============*/
 .max-w-1024px {
     max-width: 1024px;
 }
+
 .m-auto {
     margin: auto;
 }
+
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
 }
+
 .my-auto {
     margin-top: auto;
     margin-bottom: auto;
 }
-.px-8px{
+
+.px-8px {
     padding-left: 8px;
     padding-right: 8px;
 }
-.py-8px{
+
+.py-8px {
     padding-top: 8px;
     padding-bottom: 8px;
 }
-.px-10px{
+
+.px-10px {
     padding-left: 10px;
     padding-right: 10px;
 }
-.py-10px{
+
+.py-10px {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.px-15px{
+
+.px-15px {
     padding-left: 15px;
     padding-right: 15px;
 }
-.py-15px{
+
+.py-15px {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.px-30px{
+.px-20px {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.py-20px {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.px-30px {
     padding-left: 30px;
     padding-right: 30px;
 }
-.py-30px{
+
+.py-30px {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.px-40px{
+
+.px-40px {
     padding-left: 40px;
     padding-right: 40px;
 }
-.py-40px{
+
+.py-40px {
     padding-top: 40px;
     padding-bottom: 40px;
 }
-.pb-50px{
+
+.pb-50px {
     padding-bottom: 50px;
 }
-.pb-80px{
+
+.pb-80px {
     padding-bottom: 80px;
 }
 
 /* Large screen devices */
 @media screen and (min-width: 992px) {
-    .lg-px-10px{
+    .lg\:px-10px {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .lg-py-10px{
+
+    .lg\:py-10px {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .lg-px-20px{
+
+    .lg\:px-20px {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .lg-py-20px{
+
+    .lg\:py-20px {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .lg-p-40px{
+
+    .lg\:p-40px {
         padding: 40px;
     }
-    .lg-pt-50px{
+
+    .lg\:pt-50px {
         padding-top: 50px;
     }
-    .lg-py-50px{
+
+    .lg\:py-50px {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-    .lg-py-80px{
+
+    .lg\:py-80px {
         padding-top: 80px;
         padding-bottom: 80px;
     }
 }
-@media (min-width: 1024px){
+
+@media (min-width: 1024px) {
     .lg\:px-20px {
         padding-left: 20px;
         padding-right: 20px;
@@ -221,36 +295,68 @@ a.link-email>svg {
 }
 
 /*============ border ============*/
-.round-full{
+.round-full {
     border-radius: 9999px;
+}
+.round-20px{
+    border-radius: 20px;
+}
+.lg\:round-30px{
+    border-radius: 30px;
 }
 .round-50px {
     border-radius: 50px;
 }
+
 .round-t-50px {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
 
 /*============ font ============*/
-.uppercase{
+.uppercase {
     text-transform: uppercase;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
-.font-bold{
+.font-semibold {
+    font-weight: 600;
+}
+.font-bold {
     font-weight: 700;
+}
+
+.text-11px {
+    font-size: 11px;
+    line-height: 1;
+}
+
+.text-11px {
+    font-size: 11px;
+    line-height: 1;
 }
 .text-14px {
     font-size: 14px;
     line-height: 1;
 }
+
 .text-16px {
     font-size: 16px;
     line-height: 1;
 }
+
 .text-18px {
     font-size: 18px;
     line-height: 1;
+}
+
+.tracking-wider {
+    letter-spacing: .05em;
+}
+
+/*============ opacity ============*/
+.opacity-70 {
+    opacity: .7;
 }
