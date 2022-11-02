@@ -142,7 +142,9 @@ gulp.task('html', function () {
     return gulp.src('./src/*.html')
         .pipe(htmlreplace({
             'css': 'css/bundle.min.css',
-            'js': 'js/bundle.min.js'
+            'js': {
+                src: 'js/bundle.min.js', tpl: '<script src="%s" defer></script>'
+            }
         }))
         .pipe(minifyHTML(options))
         .pipe(gulp.dest('./dest/'));

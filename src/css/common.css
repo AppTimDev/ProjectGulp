@@ -74,7 +74,17 @@ footer {
 a.link-email>svg {
     fill: red;
 }
+.list-none{
+    list-style-type: none;
+}	
+/*============ position ============*/
 
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
 /*============ flex ============*/
 
 .flex {
@@ -437,12 +447,22 @@ a.link-email>svg {
     -o-object-fit: cover;
     object-fit: cover;
 }
-
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
 /*============ Size ============*/
 .h-100px {
     height: 100px;
 }
-
+.h-300px{
+    height: 300px;
+}
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+}
 .overflow-hidden {
     overflow: hidden;
 }
