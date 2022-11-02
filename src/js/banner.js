@@ -10,7 +10,10 @@ var changeBanner = function (selectId) {
     
     //unset the active bubble    
     var bubblesActive = document.getElementsByClassName("bubble bubble-active");
-    bubblesActive[0].className = "bubble";
+    //bubblesActive[0].className = "bubble";
+    bubblesActive[0].className = bubblesActive[0].className.replace("bubble bubble-active", "bubble");
+    // console.log(bubblesActive[0].className);
+    
     // for (var i = 0; i < bubblesActive.length; i++) {
     //     var bubbleActive = bubblesActive[i];
     //     bubbleActive.className = "bubble";
@@ -19,7 +22,8 @@ var changeBanner = function (selectId) {
     // //set selected bubble active
     var bubbles = document.getElementsByClassName("bubble");     
     bubbleActiveId = Number(selectId);
-    bubbles[bubbleActiveId].className = "bubble bubble-active";
+    //bubbles[bubbleActiveId].className = "bubble bubble-active";
+    bubbles[bubbleActiveId].className = bubbles[bubbleActiveId].className.replace("bubble", "bubble bubble-active");
 }
 
 var counter = (function () {

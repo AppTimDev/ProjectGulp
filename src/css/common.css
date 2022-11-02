@@ -172,6 +172,12 @@ a.link-email>svg {
     grid-gap: 40px;
     gap: 40px;
 }
+@media (min-width: 768px) {
+    .md\:gap-30px {
+        grid-gap: 30px;
+        gap: 30px;
+    }
+}
 
 /* Small screen devices (596px and above) */
 @media screen and (min-width: 596px) {
@@ -225,6 +231,9 @@ a.link-email>svg {
 }
 .py-10px {
     padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pb-10px {
     padding-bottom: 10px;
 }
 .px-15px {
