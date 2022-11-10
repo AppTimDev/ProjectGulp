@@ -17,7 +17,8 @@
         "rimraf": "^3.0.2"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "gulp dev",
+        "build": "gulp build"
     },
     "author": "AppTimDev",
     "license": "ISC"
