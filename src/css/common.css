@@ -386,6 +386,11 @@ a.link-email>svg {
     border-top-right-radius: 50px;
 }
 
+/*============ text ============*/
+.break-words {
+    overflow-wrap: break-word;
+}
+
 /*============ font ============*/
 .uppercase {
     text-transform: uppercase;
