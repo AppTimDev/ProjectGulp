@@ -23,7 +23,7 @@ gulp.task('browser-dev', () => {
         server: {
             baseDir: path.src,
         },
-        port: 8080
+        port: 3000
     });
 });
 

@@ -1,4 +1,11 @@
-## A template project to show how to use gulp.
+# Home Page
+## This project is used to create my home page.
+
+It mainly focuses on the front end environment for building a simple web page 
+
+It uses gulp.js to bundle the whole project and optimize for the best performance. 
+
+It also provides a way to show a simple responsive web design that can adjust for different screen sizes and viewports.
 
 ---
 
@@ -16,12 +23,13 @@ Use gulp as a task runner
 ## Environment:
 - Windows 10
 
-- node v10.24.1
+- node v10.24.1 
 - npm 6.14.12
+- nvm 1.1.7
 - gulp 3.8.11
   - CLI version 3.8.11
   - Local version 3.8.11
-
+- version of node packages (refer to package.json)
 - gulp-concat ^2.6.1
 - gulp-contrib-copy ^0.1.3
 - gulp-html-replace ^1.6.2
@@ -36,14 +44,29 @@ Use gulp as a task runner
 ---
 
 ## Installation
+### `Nvm`, `Node`
+Install nvm for window users
+1. Go to https://github.com/coreybutler/nvm-windows/releases
+
+Install node version 10.24.1
+```cmd
+nvm install 10.24.1
+```
+
+Change to node version 10.24.1
+```cmd
+nvm use 10.24.1
+```
+
+### `gulp`
 ### Install gulp globally 
 ```cmd
-npm install -g gulp
+npm i -g gulp
 ```
 
 ### Install the gulp package in your devDependencies
 ```cmd
-npm install gulp --save-dev
+npm i --save-dev gulp
 ```
 
 ### Edit the system environment variables
@@ -59,59 +82,64 @@ npm install -g gulp@version_you_need
 
 npm install -g gulp@3.8.11
 
-### Installation of all the gulp packages required
+### `Node modules`
 ```cmd
-npm install
-```
-```cmd
-npm install gulp-webserver --save-dev
-npm install gulp-minify-css gulp-uglify gulp-concat gulp-rename --save-dev
-npm install gulp-html-replace gulp-minify-html --save-dev
-npm install rimraf gulp-contrib-copy --save-dev
-npm install browser-sync --save-dev
+npm i
 ```
 
----
-
-## Install nvm for window users
-1. Go to https://github.com/coreybutler/nvm-windows/releases
-
-## Nvm Commands 
-### Install the version for node
+Full details:
 ```cmd
-nvm install 10.24.1
-```
-### Use the node version
-```cmd
-nvm use 10.24.1
-```
-### List the installed version of node and all latest versions.
-```cmd
-nvm list
-nvm list available
+npm i --save-dev gulp-webserver 
+npm i --save-dev gulp-minify-css gulp-uglify gulp-concat gulp-rename 
+npm i --save-dev gulp-html-replace gulp-minify-html 
+npm i --save-dev rimraf gulp-contrib-copy 
+npm i --save-dev browser-sync 
 ```
 
 ---
 
-## Commands 
-### Check the version for node, npm
+## Usage
+
+### `npm run dev`
+Runs the app in development mode and the dev server (Port 3000).
+
+Open http://localhost:3000 to view it in the browser
+
+### `npm run build`
+Builds for production to the dest folder.
+
+It bundles the app in production mode and optimizes the build for the best performance.
+
+---
+
+## Version
+### Check the version for node, npm, nvm
+#### Node
 ```cmd
 node -v
 npm -v
+nvm version
 ```
-### Check the version for gulp (after installation)
+
+#### Check the version for gulp (after installation)
 ```cmd
 gulp -v
 ```
 
-### List all the node packages
+#### List all the node packages
 ```cmd
 npm list 
 ```
+or list one package
 
-### Check the version of node packages
 ```cmd
 npm list browser-sync
+```
+
+#### List the installed version of node and all latest versions.
+```cmd
+nvm list
+nvm list available
 ```
 
 ---
